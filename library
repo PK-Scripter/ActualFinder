@@ -1,0 +1,19 @@
+local Lib = {}
+
+local UserInputService = game:GetService("UserInputService")
+
+function Lib:Create(Object, Properties, Parent)
+    local NewObject = Instance.new(Object)
+
+    for i, v in pairs(Properties) do
+        NewObject[i] = v
+    end
+
+    if Parent ~= nil then
+        NewObject.Parent = Parent
+    end
+
+    return NewObject
+end
+
+return Lib;
